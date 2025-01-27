@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <div className="bg-blue-950 mt-36 pt-32 text-center">
+      <div className="bg-blue-950 px-7 mt-36 pt-32 text-center">
         <h3 className="text-xl pb-7 text-gray-500">
           Subscribe to get our Newsletter
         </h3>

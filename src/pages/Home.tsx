@@ -8,9 +8,9 @@ import Footer from "../components/Layout/Footer";
 function Home() {
   return (
     <>
-      <div className="bg-orange-100">
+      <div className="bg-orange-100 px-7">
         <Header />
-        <div className="flex justify-between items-center px-36">
+        <div className="flex justify-between items-center lg:px-36">
           <div>
             <h1 className="text-5xl font-bold text-blue-950 pb-9">
               <span className="text-orange">Studying</span> Online is now much
@@ -23,13 +23,16 @@ function Home() {
             <Button />
           </div>
           <div>
-            <img className="w-[911px]" src="src/assets/person.png" />
+            <img
+              className="w-[911px] lg:block hidden "
+              src="src/assets/person.png"
+            />
           </div>
         </div>
       </div>
 
-      <div className="text-center pt-20">
-        <div className="px-[545px]">
+      <div className="text-center pt-20 px-7">
+        <div className="lg:px-[545px]">
           <h1 className="font-bold text-4xl text-blue-950">
             All-In-One <span className="text-orange">Cloud Software.</span>
           </h1>
@@ -38,7 +41,7 @@ function Home() {
             tools needed to run a successful school or office.
           </p>
         </div>
-        <div className="grid px-56 pt-24 grid-cols-3 gap-14">
+        <div className="grid lg:px-56 pt-24 lg:grid-cols-3 grig gap-14">
           <Card
             title="Online Billing, Invoicing, & Contracts"
             description="Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts"
@@ -60,8 +63,8 @@ function Home() {
         </div>
       </div>
 
-      <div className="text-center pt-40">
-        <div className="px-[500px]">
+      <div className="text-center pt-40 px-7">
+        <div className="lg:px-[500px]">
           <h1 className="font-bold text-4xl text-blue-950">
             Our <span className="text-orange">Services</span>
           </h1>
@@ -72,8 +75,8 @@ function Home() {
             provide students with feedback all in one place.
           </p>
         </div>
-        <div className="px-44 text-start pt-28">
-          <div className="grid grid-cols-2 gap-12 items-center">
+        <div className="lg:px-44 text-start pt-28">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img src="src/assets/data.jpg" />
             </div>
@@ -90,7 +93,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="pt-24 grid grid-cols-2 gap-12 items-center">
+          <div className="pt-24 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-bold text-4xl text-blue-950">
                 Airtime/Data <span className="text-orange">Purchase</span>
