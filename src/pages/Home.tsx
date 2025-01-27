@@ -8,7 +8,7 @@ import Footer from "../components/Layout/Footer";
 function Home() {
   return (
     <>
-      <div className="bg-orange-100 px-7">
+      <div className="bg-orange-100 px-7 pb-10">
         <Header />
         <div className="flex justify-between items-center lg:px-36">
           <div>
@@ -78,7 +78,7 @@ function Home() {
         <div className="lg:px-44 text-start pt-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="src/assets/data.jpg" />
+              <img src="/public/images/data.jpg" />
             </div>
             <div>
               <h1 className="font-bold text-4xl text-blue-950">
@@ -106,7 +106,7 @@ function Home() {
               </p>
             </div>
             <div>
-              <img src="src/assets/data.jpg" />
+              <img src="/public/images/data.jpg" />
             </div>
           </div>
         </div>

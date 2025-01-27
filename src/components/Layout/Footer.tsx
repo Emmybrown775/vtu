@@ -8,9 +8,9 @@ function Footer() {
         <input
           type="email"
           placeholder="Your Email"
-          className="border-2 outline-0 rounded-full px-3 py-2 border-gray-500 text-lg text-gray-500"
+          className="border-2 w-[80%] outline-0 rounded-full px-3 py-2 border-gray-500 text-lg text-gray-500"
         />
-        <button className="ms-5 px-5 py-2 bg-blue-600 rounded-full text-white text-lg">
+        <button className="ms-5 lg:mt-0 mt-4 px-5 py-2 bg-blue-600 rounded-full text-white text-lg">
           Subscribe
         </button>
         <div className="flex text-gray-500 items-center justify-center  py-7">
