@@ -8,7 +8,7 @@ function AppHeader() {
 
   return (
     <>
-      <div className="absolute shadow-sm z-50 bg-white w-full flex justify-between px-7 py-3">
+      <div className="fixed  shadow-sm z-50 bg-white w-full flex justify-between px-7 py-3">
         <div onClick={() => setIsOpen(!isOpen)}>
           {!isOpen ? (
             <RiMenuLine className="size-7" />

@@ -3,6 +3,7 @@ import Button from "../Common/Button";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [droppedDown, setDroppedDown] = useState(false);
@@ -29,7 +30,9 @@ function Header() {
             <a>Contact</a>
           </div>
           <div className="flex text-[18px] gap-8">
-            <button className="bg-white py-3 px-9 rounded-4xl">Login</button>
+            <Link to="/dashboard" className="bg-white py-3 px-9 rounded-4xl">
+              Login
+            </Link>
             <Button />
           </div>
         </div>
