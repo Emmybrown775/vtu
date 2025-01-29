@@ -32,8 +32,8 @@ function SideBarLink({
     <>
       {!dropDown ? (
         <div className="flex items-center gap-3 px-5 py-3 rounded-sm">
-          <Icon className="size-7 text-white" />
-          <h1 className="text-white text-lg">{title}</h1>
+          <Icon className="size-4 text-white" />
+          <h1 className="text-white text-base">{title}</h1>
         </div>
       ) : (
         <div className="border-t-2 border-b-2 my-3 border-white">
@@ -42,8 +42,8 @@ function SideBarLink({
             className="flex justify-between items-center"
           >
             <div className="flex items-center gap-3 px-5 py-5  rounded-sm">
-              <Icon className="size-7 text-white" />
-              <h1 className="text-white text-lg">{title}</h1>
+              <Icon className="size-4 text-white" />
+              <h1 className="text-white text-base">{title}</h1>
             </div>
             <div>
               {!droppedDown ? (

@@ -1,7 +1,31 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
 
 @theme {
     --font-sans: "Poppins", "sans";
     --color-orange: #f48c06;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* width of scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of track */
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888; /* color of scroll thumb */
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color when hovering */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin; /* "auto", "thin", or "none" */
+    scrollbar-color: #888 #f1f1f1; /* thumb and track color */
 }

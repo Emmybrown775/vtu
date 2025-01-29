@@ -1,17 +1,24 @@
 import { FiBell } from "react-icons/fi";
 import { IoPersonCircle } from "react-icons/io5";
-import { RiMenuLine } from "react-icons/ri";
+import { RiCloseLine, RiMenuLine } from "react-icons/ri";
+import { useSidebar } from "../hooks/useSidebar";
 
 function AppHeader() {
+  const { setIsOpen, isOpen } = useSidebar();
+
   return (
     <>
-      <div className="flex justify-between px-10 py-7">
-        <div>
-          <RiMenuLine className="size-10" />
+      <div className="absolute shadow-sm z-50 bg-white w-full flex justify-between px-7 py-3">
+        <div onClick={() => setIsOpen(!isOpen)}>
+          {!isOpen ? (
+            <RiMenuLine className="size-7" />
+          ) : (
+            <RiCloseLine className="size-7" />
+          )}
         </div>
         <div className="flex gap-8">
-          <FiBell className="size-10" />
-          <IoPersonCircle className="size-10" />
+          <FiBell className="size-7" />
+          <IoPersonCircle className="size-7" />
         </div>
       </div>
     </>
