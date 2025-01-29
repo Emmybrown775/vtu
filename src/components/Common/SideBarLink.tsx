@@ -70,7 +70,7 @@ function SideBarLink({
             >
               <ul className="pl-16 list-disc pb-3 list-inside">
                 {dropDownItems?.map((text, index) => (
-                  <li className="text-white py-2  text-lg" key={index}>
+                  <li className="text-white py-2  text-base" key={index}>
                     {text}
                   </li>
                 ))}
