@@ -14,7 +14,7 @@ function Layout({ children }: LayoutInterface) {
         <AppHeader />
         <AppSideBar />
 
-        <div className="pt-24 px-8 bg-blue-50 min-h-screen flex flex-col ">
+        <div className="pt-24 pb-9 px-8 bg-blue-50 min-h-screen flex flex-col ">
           {children}
         </div>
       </SidebarProvider>

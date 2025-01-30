@@ -8,7 +8,7 @@ interface ServiceCardInterFace {
 function ServicesCard({ title, subs, icon: Icon }: ServiceCardInterFace) {
   return (
     <>
-      <div className="bg-white px-5 py-7 shadow-md">
+      <div className="bg-white rounded-lg px-5 py-7 shadow-md">
         <div className="flex items-center gap-6">
           <Icon className="size-8 text-orange" />
           <div>

@@ -21,14 +21,14 @@ function Dashboard() {
           </div>
           <div>
             <h2 className="text-gray-500 pb-1">Current Balance</h2>
-            <h1 className="text-2xl pb-2 text-blue-950">N0.00</h1>
+            <h1 className="text-2xl pb-2 font-bold text-blue-950">N0.00</h1>
             <AppButton title="Fund Wallet" />
           </div>
         </div>
 
         {/* SERVICES */}
         <div className="text-gray-500 pt-5">
-          <h2>Services</h2>
+          <h2 className="pb-4">Services</h2>
           <div className="grid gap-4 lg:grid-cols-3">
             <ServicesCard title="Data" subs="Purchase" icon={IoWifi} />
             <ServicesCard title="Airtime" subs="Purchase" icon={BiPhone} />
