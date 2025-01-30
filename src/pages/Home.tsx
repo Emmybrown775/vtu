@@ -8,7 +8,7 @@ import Footer from "../components/Layout/Footer";
 function Home() {
   return (
     <>
-      <div className="bg-orange-100 px-7 pb-10">
+      <div className="bg-orange-100 px-7 lg:pb-0 pb-10">
         <Header />
         <div className="flex justify-between items-center lg:px-36">
           <div>
