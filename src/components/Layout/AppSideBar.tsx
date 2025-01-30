@@ -15,14 +15,13 @@ import { IoMdCode } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
 import { useSidebar } from "../hooks/useSidebar";
 import { motion } from "motion/react";
-import { useState } from "react";
 
 function AppSideBar() {
-  const { isOpen } = useSidebar();
-  const [hidden, setIsHidden] = useState(true);
+  const { isOpen, isHidden, setIsHidden } = useSidebar();
+
   return (
     <>
-      {hidden && (
+      {!isHidden && (
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           animate={{
@@ -37,10 +36,10 @@ function AppSideBar() {
               setIsHidden(true);
             }
           }}
-          className="fixed mt-12 pb-14 custom-scrollbar overflow-y-auto bg-blue-950 h-lvh lg:w-[20%] w-[80%] px-5 py-5"
+          className={`fixed mt-12 pb-14 custom-scrollbar overflow-y-auto bg-blue-950 h-lvh lg:w-[20%] w-[80%] px-5 py-5`}
         >
-          <SideBarLink title="Dashboard" icon={RxDashboard} />
-          <SideBarLink title="Profile" icon={IoPersonOutline} />
+          <SideBarLink title="Dashboard" url="/dashboard" icon={RxDashboard} />
+          <SideBarLink title="Profile" url="/profile" icon={IoPersonOutline} />
           <SideBarLink title="Fund Wallet" icon={IoWalletOutline} />
           <h3 className="px-5 text-gray-500">Transactions</h3>
           <SideBarLink title="Buy Data" icon={IoWifi} />

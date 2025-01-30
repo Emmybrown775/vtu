@@ -4,12 +4,21 @@ import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import { useSidebar } from "../hooks/useSidebar";
 
 function AppHeader() {
-  const { setIsOpen, isOpen } = useSidebar();
+  const { setIsOpen, isOpen, setIsHidden } = useSidebar();
+
+  const toggleMenu = () => {
+    if (isOpen) {
+      setIsOpen(!isOpen);
+    } else {
+      setIsHidden(false);
+      setIsOpen(true);
+    }
+  };
 
   return (
     <>
       <div className="fixed  shadow-sm z-50 bg-white w-full flex justify-between px-7 py-3">
-        <div onClick={() => setIsOpen(!isOpen)}>
+        <div onClick={toggleMenu}>
           {!isOpen ? (
             <RiMenuLine className="size-7" />
           ) : (

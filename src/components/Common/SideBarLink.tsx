@@ -2,12 +2,14 @@ import { useState } from "react";
 import { IconType } from "react-icons";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 interface SideBarLinkProps {
   title: string;
   icon: IconType;
   dropDown?: boolean;
   dropDownItems?: Array<string>;
+  url?: string;
 }
 
 function SideBarLink({
@@ -15,6 +17,7 @@ function SideBarLink({
   icon: Icon,
   dropDown = false,
   dropDownItems,
+  url = "/",
 }: SideBarLinkProps) {
   const [droppedDown, setDroppedDown] = useState(false);
   const [hidden, setHidden] = useState(true);
@@ -31,25 +34,28 @@ function SideBarLink({
   return (
     <>
       {!dropDown ? (
-        <div className="flex items-center gap-3 px-5 py-3 rounded-sm">
-          <Icon className="size-4 text-white" />
-          <h1 className="text-white text-base">{title}</h1>
-        </div>
+        <Link
+          to={url}
+          className="flex hover:bg-blue-50 text-white hover:text-blue-950 items-center gap-3 px-5 py-3 rounded-sm"
+        >
+          <Icon className="size-4  " />
+          <h1 className="  text-base">{title}</h1>
+        </Link>
       ) : (
         <div className="border-t-2 border-b-2 my-3 border-white">
           <div
             onClick={toggleMenu}
-            className="flex justify-between items-center"
+            className="flex  hover:bg-blue-50 hover:text-blue-950 text-white  justify-between items-center"
           >
             <div className="flex items-center gap-3 px-5 py-5  rounded-sm">
-              <Icon className="size-4 text-white" />
-              <h1 className="text-white text-base">{title}</h1>
+              <Icon className="size-4 " />
+              <h1 className=" text-base">{title}</h1>
             </div>
             <div>
               {!droppedDown ? (
-                <FaChevronDown className="size-4 text-white" />
+                <FaChevronDown className="size-4 " />
               ) : (
-                <FaChevronUp className="size-4 text-white" />
+                <FaChevronUp className="size-4 " />
               )}
             </div>
           </div>

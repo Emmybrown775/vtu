@@ -2,5 +2,12 @@ import { createContext } from "react";
 
 export const SidebarContext = createContext<{
   isOpen: boolean;
+  isHidden: boolean;
   setIsOpen: (isOpen: boolean) => void;
-}>({ isOpen: false, setIsOpen: () => {} });
+  setIsHidden: (isHidden: boolean) => void;
+}>({
+  isOpen: false,
+  setIsOpen: () => {},
+  isHidden: true,
+  setIsHidden: () => {},
+});

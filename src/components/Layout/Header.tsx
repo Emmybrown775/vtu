@@ -80,7 +80,9 @@ function Header() {
               Contact
             </a>
             <div className="flex pt-5 text-[18px] justify-center gap-8">
-              <button className="bg-white py-3 px-9 rounded-4xl">Login</button>
+              <Link to="/dashboard" className="bg-white py-3 px-9 rounded-4xl">
+                Login
+              </Link>
               <Button />
             </div>
           </motion.div>

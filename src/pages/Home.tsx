@@ -25,7 +25,7 @@ function Home() {
           <div>
             <img
               className="w-[911px] lg:block hidden "
-              src="src/assets/person.png"
+              src="images/person.png"
             />
           </div>
         </div>
@@ -78,7 +78,7 @@ function Home() {
         <div className="lg:px-44 text-start pt-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="/public/images/data.jpg" />
+              <img src="images/data.jpg" />
             </div>
             <div>
               <h1 className="font-bold text-4xl text-blue-950">
@@ -106,7 +106,7 @@ function Home() {
               </p>
             </div>
             <div>
-              <img src="/public/images/data.jpg" />
+              <img src="images/data.jpg" />
             </div>
           </div>
         </div>
