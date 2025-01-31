@@ -40,7 +40,11 @@ function AppSideBar() {
         >
           <SideBarLink title="Dashboard" url="/dashboard" icon={RxDashboard} />
           <SideBarLink title="Profile" url="/profile" icon={IoPersonOutline} />
-          <SideBarLink title="Fund Wallet" icon={IoWalletOutline} />
+          <SideBarLink
+            title="Fund Wallet"
+            url="/fund-wallet"
+            icon={IoWalletOutline}
+          />
           <h3 className="px-5 text-gray-500">Transactions</h3>
           <SideBarLink title="Buy Data" icon={IoWifi} />
           <SideBarLink title="Buy Airtime" icon={BiPhone} />
