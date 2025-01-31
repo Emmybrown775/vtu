@@ -46,11 +46,19 @@ function AppSideBar() {
             icon={IoWalletOutline}
           />
           <h3 className="px-5 text-gray-500">Transactions</h3>
-          <SideBarLink title="Buy Data" icon={IoWifi} />
-          <SideBarLink title="Buy Airtime" icon={BiPhone} />
-          <SideBarLink title="TV Subscription" icon={BiTv} />
-          <SideBarLink title="Exam Pin" icon={FaGraduationCap} />
-          <SideBarLink title="Electricity" icon={GiLightBulb} />
+          <SideBarLink url="/data" title="Buy Data" icon={IoWifi} />
+          <SideBarLink url="/airtime" title="Buy Airtime" icon={BiPhone} />
+          <SideBarLink url="/tv-subs" title="TV Subscription" icon={BiTv} />
+          <SideBarLink
+            url="/exam-pin"
+            title="Exam Pin"
+            icon={FaGraduationCap}
+          />
+          <SideBarLink
+            title="Electricity"
+            url="/electricity"
+            icon={GiLightBulb}
+          />
           <SideBarLink
             title="History"
             icon={AiOutlineHistory}
