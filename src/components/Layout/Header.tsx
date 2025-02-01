@@ -24,16 +24,22 @@ function Header() {
         <h1>Hello</h1>
         <div className="lg:flex gap-10 items-center hidden">
           <div className="flex gap-10 text-[18px]">
-            <a>Home</a>
-            <a>About</a>
-            <a>Services</a>
-            <a>Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
           </div>
           <div className="flex text-[18px] gap-8">
-            <Link to="/dashboard" className="bg-white py-3 px-9 rounded-4xl">
+            <Link to="/login" className="bg-white py-3 px-9 rounded-4xl">
               Login
             </Link>
-            <Button />
+
+            <Link
+              to="/signup"
+              className="bg-orange text-white py-3 px-9 rounded-4xl"
+            >
+              SignUp
+            </Link>
           </div>
         </div>
       </div>

@@ -3,12 +3,13 @@ import { IconType } from "react-icons";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { SidebarDropdownType } from "../../types/types";
 
 interface SideBarLinkProps {
   title: string;
   icon: IconType;
   dropDown?: boolean;
-  dropDownItems?: Array<string>;
+  dropDownItems?: Array<SidebarDropdownType>;
   url?: string;
 }
 
@@ -76,9 +77,11 @@ function SideBarLink({
             >
               <ul className="pl-16 list-disc pb-3 list-inside">
                 {dropDownItems?.map((text, index) => (
-                  <li className="text-white py-2  text-base" key={index}>
-                    {text}
-                  </li>
+                  <Link to={text.url}>
+                    <li className="text-white py-2  text-base" key={index}>
+                      {text.title}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             </motion.div>

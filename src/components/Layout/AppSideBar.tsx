@@ -11,13 +11,17 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { GiLightBulb } from "react-icons/gi";
 import { AiOutlineHistory } from "react-icons/ai";
 import { CiSettings } from "react-icons/ci";
-import { IoMdCode } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
 import { useSidebar } from "../hooks/useSidebar";
 import { motion } from "motion/react";
+import { SidebarDropdownType } from "../../types/types";
 
 function AppSideBar() {
   const { isOpen, isHidden, setIsHidden } = useSidebar();
+  const settingsDropDown: Array<SidebarDropdownType> = [
+    { title: "Change Password", url: "/change-password" },
+    { title: "Change Transaction Pin", url: "/change-pin" },
+  ];
 
   return (
     <>
@@ -61,26 +65,17 @@ function AppSideBar() {
           />
           <SideBarLink
             title="History"
+            url="/transaction-history"
             icon={AiOutlineHistory}
-            dropDown={true}
-            dropDownItems={[
-              "Data History",
-              "Airtime History",
-              "Data Card History",
-              "Exam Pin History",
-              "TV Subs History",
-              "Bill History",
-              "Fund History",
-            ]}
+            dropDown={false}
           />
           <SideBarLink
             title="Settings"
             icon={CiSettings}
             dropDown={true}
-            dropDownItems={["Change Password", "Change Transaction Pin"]}
+            dropDownItems={settingsDropDown}
           />
-          <SideBarLink title="Help Desk" icon={IoHelp} />
-          <SideBarLink title="Developer Tools" icon={IoMdCode} />
+          <SideBarLink url="/help-desk" title="Help Desk" icon={IoHelp} />
           <SideBarLink title="Log Out" icon={FiLogOut} />
         </motion.div>
       )}
